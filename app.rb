@@ -6,7 +6,7 @@ configure do
 end
 
 get '/' do
-  puts 'aaaaaaaaaaaaaa'
+  p 'aaaaaaaaaaaaaa'
   '<a href="/async">start operation</a>'
 end
 
