@@ -12,14 +12,14 @@ end
 
 get '/async' do
   operation = proc {
-    puts 'operation started!'
+    p 'operation started!'
     10.times do |i|
       puts "#{i} times Hello, Async!"
       sleep 1
     end
   }
   callback = proc {|result|
-    puts 'operation finished!'
+    p 'operation finished!'
   }
   EventMachine.defer(operation, callback)
   redirect '/'
