@@ -1,11 +1,12 @@
 require 'sinatra'
 require 'eventmachine'
 
-configure do 
+configure do
   mime_type :json, 'application/json'
 end
 
 get '/' do
+  puts 'aaaaaaaaaaaaaa'
   '<a href="/async">start operation</a>'
 end
 
